@@ -1,0 +1,105 @@
+/* HERO */
+.place-hero {
+  height: 65vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.place-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.65)
+  );
+}
+
+.place-hero-content {
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.place-hero-content h1 {
+  font-size: 56px;
+  letter-spacing: 2px;
+}
+
+.place-hero-content p {
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+/* GLASS */
+.glass-place {
+  padding: 28px 44px;
+  border-radius: 20px;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+/* CONTENT */
+.content {
+  background: linear-gradient(180deg,#020617,#0f172a);
+  padding: 80px 14%;
+  color: #e5e7eb;
+}
+
+.block {
+  margin-bottom: 60px;
+  padding: 30px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.block h2 {
+  color: #2dd4bf;
+  margin-bottom: 14px;
+}
+
+.block ul {
+  padding-left: 20px;
+}
+
+.block li {
+  margin-top: 10px;
+  line-height: 1.7;
+}
+
+/* BUTTON */
+.center {
+  text-align: center;
+}
+
+.back-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 30px;
+  color: white;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.3);
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background: #2dd4bf;
+  color: #022c22;
+}
+
+/* SCROLL ANIMATION */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
