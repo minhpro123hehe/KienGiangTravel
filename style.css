@@ -1,0 +1,125 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* BACKGROUND */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1.08);
+  transition: opacity 0.8s ease, transform 1.2s ease;
+  z-index: 0;
+}
+
+.hero-bg.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* OVERLAY */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 1;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 64px;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+}
+
+/* GLASS EFFECT */
+.glass-nav {
+  padding: 8px 16px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+.glass-menu {
+  padding: 8px 16px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+.glass-menu:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+/* HERO CONTENT */
+.hero-content {
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-glass {
+  padding: 30px 40px;
+  background: rgba(0,0,0,0.25);
+  backdrop-filter: blur(8px);
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  max-width: 700px;
+}
+
+.hero-glass h1 {
+  font-size: 72px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  transition: opacity 0.4s ease;
+}
+
+.hero-glass p {
+  margin-top: 12px;
+  font-size: 18px;
+  opacity: 0.95;
+  transition: opacity 0.4s ease;
+}
